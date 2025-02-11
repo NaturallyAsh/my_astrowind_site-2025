@@ -1,0 +1,67 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Resume',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Work experience"
+    items={[
+      {
+        title:
+          'Founder/Data Analytics Consultant <br /> <span class="font-normal">Wilson Driven, LLC. </span> <br /> <span class="text-sm font-normal">01/2023 - Present</span>',
+        description: `- Oversee end-to-end data analytics projects for diverse client needs, from survey analysis to market research. <br /> - Utilize advanced R programming techniques to conduct in-depth statistical analyses. <br /> - Craft comprehensive PowerPoint reports featuring impactful visualizations, translating complex findings into actionable insights.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Clinical and People Manager <br /> <span class="font-normal">Metro Atlanta Urology</span> <br /> <span class="text-sm font-normal">08/2024 - 11/2024</span>',
+        description: `- Led the implementation of new training procedures for staff, resulting in improved internal communication and an 85% reduction in patient complaints. <br /> - Developed an AI-powered tool using LLM to automate transcription of internal training videos, generating concise summaries and actionable items for employees, ultimately saving time and resources.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Data Analytics Consultant <br /> <span class="font-normal">Urology Unbound, Inc.</span> <br /> <span class="text-sm font-normal">04/2022 - 11/2024</span>',
+        description: `- Analyzed data from over 300 members, identifying patterns and trends that informed fundraising strategies and outreach efforts. <br /> - Developed a website utilizing market analysis and SWOT analysis to enhance the organization's online presence and reach.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'DEI Consultant <br /> <span class="font-normal">Ivy Planning Group</span> <br /> <span class="text-sm font-normal">07/2022 - 12/2023</span>',
+        description: `- Collaborated with consultants to implement DEI strategies for various clients. <br /> - Leveraged qualitative and quantitative data analysis from employee interviews and focus groups to identify areas for improvement and measure the impact of implemented initiatives.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Master of Science in Industrial Organizational Psychology <br /> <span class="font-normal">Valdosta State University</span> <br /> <span class="text-sm font-normal"> </span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Science in Psychology <br /> <span class="font-normal">Dalton State College</span> <br /> <span class="text-sm font-normal"> </span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+</Layout>

@@ -1,4 +1,5 @@
 import { z, defineCollection } from 'astro:content';
+import { cldAssetsLoader } from 'astro-cloudinary/loaders';
 import { glob } from 'astro/loaders';
 
 const metadataDefinition = () =>
@@ -67,4 +68,9 @@ const postCollection = defineCollection({
 
 export const collections = {
   post: postCollection,
+  assets: defineCollection({
+    loader: cldAssetsLoader({
+      folder: 'my website' // Optional, without loads root directory
+    })
+  }),
 };
